@@ -58,12 +58,12 @@ const experiences = [
     platforms: ["Discord"],
   },
   {
-    title: "Senior Moderator",
+    title: "Head of Staff",
     organization: "Escape Tsunami For Brainrots",
     organizationUrl: "https://discord.gg/escapetsunami",
     date: "February 2026 - Present",
     description:
-      "Actively moderating the server, guiding and assisting Junior Moderators with their duties, and engaging with the community through regular chat participation to maintain a welcoming atmosphere.",
+      "Leading and managing the staff team, maintaining and updating documentation, overseeing moderation standards, and ensuring the community runs smoothly through effective coordination and support.",
     logo: "/images/escapetsunami-logo.jpg",
     platforms: ["Discord"],
   },
