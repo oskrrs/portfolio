@@ -1,20 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 import Image from "next/image"
 import { DiscordMemberBadge } from "@/components/discord-member-badge"
-
-function RobloxIcon({ className }: { className?: string }) {
-  return (
-    <svg
-      className={className}
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path d="M5.164 0L.16 18.928l18.676 5.072L23.84 5.072 5.164 0zm8.742 15.258l-5.164-1.404 1.404-5.164 5.164 1.404-1.404 5.164z" />
-    </svg>
-  )
-}
 
 function PlaceholderLogo({ className }: { className?: string }) {
   return (
@@ -34,7 +20,6 @@ const experiences = [
     description:
       "Leading and managing the staff team, maintaining and updating documentation, overseeing moderation standards, and ensuring the community runs smoothly through effective coordination and support.",
     logo: "/images/escapetsunami-logo.jpg",
-    platforms: ["Discord"],
   },
   {
     title: "Moderator",
@@ -45,7 +30,6 @@ const experiences = [
     description:
       "Assisting in moderating the 8 million-member community, handling user reports, enforcing server rules, and maintaining a positive environment for all members.",
     logo: "/images/brainrot-logo.png",
-    platforms: ["Discord"],
   },
   {
     title: "Moderator",
@@ -56,7 +40,6 @@ const experiences = [
     description:
       "Managing community interactions, enforcing server guidelines, handling user reports, and collaborating with the moderation team to ensure a friendly and safe environment for all members.",
     logo: "/images/beluga-logo.png",
-    platforms: ["Discord"],
   },
   {
     title: "Retired Head of Moderation",
@@ -67,7 +50,6 @@ const experiences = [
     description:
       "Rose through the ranks from Trial Moderator to Head of Moderation, managing a community of over 20,000 members and implementing effective moderation strategies that significantly reduced rule violations.",
     logo: "/images/romart-logo.png",
-    platforms: ["Discord", "Roblox"],
   },
 ]
 
@@ -123,22 +105,7 @@ export function Projects() {
                       {experience.description}
                     </p>
                     <div className="mt-4 flex flex-wrap gap-2">
-                      {(experience.platforms || ["Discord"]).map((platform) => {
-                        if (platform === "Discord") {
-                          return (
-                            <DiscordMemberBadge
-                              key={platform}
-                              inviteCode={experience.inviteCode}
-                            />
-                          )
-                        }
-                        return (
-                          <Badge key={platform} variant="secondary" className="text-xs flex items-center gap-1">
-                            {platform === "Roblox" && <RobloxIcon className="h-3 w-3" />}
-                            {platform}
-                          </Badge>
-                        )
-                      })}
+                      <DiscordMemberBadge inviteCode={experience.inviteCode} />
                     </div>
                   </div>
                 </div>
