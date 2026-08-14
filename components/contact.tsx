@@ -21,9 +21,10 @@ export function Contact() {
         <h2 className="mb-4 text-center text-sm font-medium uppercase tracking-widest text-primary">
           Contact
         </h2>
-        <p className="mx-auto mb-16 max-w-2xl text-center text-3xl font-semibold tracking-tight text-foreground sm:text-4xl text-balance">
+        <p className="mx-auto mb-4 max-w-2xl text-center text-3xl font-semibold tracking-tight text-foreground sm:text-4xl text-balance">
           Get in touch
         </p>
+        <div className="mx-auto mb-16 h-1 w-16 rounded-full bg-primary" />
         
         <div className="text-center space-y-8">
           <p className="text-muted-foreground max-w-xl mx-auto">
@@ -31,7 +32,7 @@ export function Contact() {
             If you&apos;re interested in hiring me, send me a message on Discord!
           </p>
           
-          <Card className="border-0 bg-muted/30 max-w-sm mx-auto">
+          <Card className="mx-auto max-w-sm border border-border bg-card shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5">
             <CardContent className="p-6">
               <div className="flex flex-col items-center gap-4">
                 <div className="rounded-lg bg-primary/10 p-4">

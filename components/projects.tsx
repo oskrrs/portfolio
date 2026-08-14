@@ -68,12 +68,12 @@ export function Projects() {
           {experiences.map((experience, index) => (
             <Card
               key={`${experience.organization}-${index}`}
-              className="border-0 bg-muted/30 shadow-sm"
+              className="group border border-border bg-card shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5"
             >
               <CardContent className="p-6">
                 <div className="flex gap-4">
                   {experience.logo ? (
-                    <div className="h-14 w-14 shrink-0 rounded-lg overflow-hidden bg-muted relative">
+                    <div className="h-14 w-14 shrink-0 rounded-lg overflow-hidden bg-muted relative ring-1 ring-border transition-transform duration-300 group-hover:scale-105">
                       <Image
                         src={experience.logo}
                         alt={experience.organization}

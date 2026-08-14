@@ -24,17 +24,20 @@ export function Skills() {
           Tools and traits I bring to the table
         </p>
         
-        <div className="grid gap-12 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-3">
           {skillCategories.map((category) => (
-            <div key={category.title}>
+            <div
+              key={category.title}
+              className="rounded-xl border border-border bg-card p-6 shadow-sm transition-colors hover:border-primary/40"
+            >
               <h3 className="mb-6 text-center text-lg font-semibold text-foreground">
                 {category.title}
               </h3>
-              <div className="flex flex-wrap justify-center gap-3">
+              <div className="flex flex-wrap justify-center gap-2.5">
                 {category.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="rounded-full bg-background px-4 py-2 text-sm font-medium text-foreground shadow-sm transition-colors hover:bg-primary hover:text-primary-foreground"
+                    className="rounded-full border border-border bg-background px-3.5 py-1.5 text-sm font-medium text-foreground transition-all hover:-translate-y-0.5 hover:border-primary hover:bg-primary hover:text-primary-foreground"
                   >
                     {skill}
                   </span>
