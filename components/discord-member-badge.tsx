@@ -29,17 +29,28 @@ function formatCount(count: number): string {
 const fetcher = (url: string) => fetch(url).then((res) => res.json())
 
 export function DiscordMemberBadge({ inviteCode }: { inviteCode: string }) {
-  const { data } = useSWR(`/api/discord-count?code=${inviteCode}`, fetcher, {
-    refreshInterval: 60_000,
-    revalidateOnFocus: true,
-  })
+  const { data, isLoading } = useSWR(
+    `/api/discord-count?code=${inviteCode}`,
+    fetcher,
+    {
+      refreshInterval: 60_000,
+      revalidateOnFocus: true,
+    }
+  )
 
   const memberCount: number | null = data?.memberCount ?? null
 
+  let label = "Discord"
+  if (isLoading) {
+    label = "Loading…"
+  } else if (memberCount !== null) {
+    label = `${formatCount(memberCount)} members`
+  }
+
   return (
-    <Badge variant="secondary" className="text-xs flex items-center gap-1">
-      <DiscordIcon className="h-3 w-3" />
-      {memberCount !== null ? `${formatCount(memberCount)} members` : "Discord"}
+    <Badge variant="secondary" className="flex items-center gap-1.5 text-xs">
+      <DiscordIcon className="h-3 w-3 text-primary" />
+      {label}
     </Badge>
   )
 }

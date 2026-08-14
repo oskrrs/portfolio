@@ -14,8 +14,8 @@ const experiences = [
   {
     title: "Head of Staff",
     organization: "Escape Tsunami For Brainrots",
-    organizationUrl: "https://discord.gg/escapetsunami",
-    inviteCode: "escapetsunami",
+    organizationUrl: "https://discord.gg/6ycGqCgra7",
+    inviteCode: "6ycGqCgra7",
     date: "February 2026 - Present",
     description:
       "Leading and managing the staff team, maintaining and updating documentation, overseeing moderation standards, and ensuring the community runs smoothly through effective coordination and support.",
@@ -55,25 +55,26 @@ const experiences = [
 
 export function Projects() {
   return (
-    <section id="projects" className="px-6 py-24">
+    <section id="projects" className="scroll-mt-16 border-t border-border bg-muted/60 px-6 py-24">
       <div className="mx-auto max-w-5xl">
         <h2 className="mb-4 text-center text-sm font-medium uppercase tracking-widest text-primary">
           Projects
         </h2>
-        <p className="mx-auto mb-16 max-w-2xl text-center text-3xl font-semibold tracking-tight text-foreground sm:text-4xl text-balance">
+        <p className="mx-auto mb-4 max-w-2xl text-center text-3xl font-semibold tracking-tight text-foreground sm:text-4xl text-balance">
           Work Experience
         </p>
+        <div className="mx-auto mb-16 h-1 w-16 rounded-full bg-primary" />
 
         <div className="flex flex-col gap-6">
           {experiences.map((experience, index) => (
             <Card
               key={`${experience.organization}-${index}`}
-              className="border-0 bg-muted/30 shadow-sm"
+              className="group border border-border bg-card shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5"
             >
               <CardContent className="p-6">
                 <div className="flex gap-4">
                   {experience.logo ? (
-                    <div className="h-14 w-14 shrink-0 rounded-lg overflow-hidden bg-muted relative">
+                    <div className="h-14 w-14 shrink-0 rounded-lg overflow-hidden bg-muted relative ring-1 ring-border transition-transform duration-300 group-hover:scale-105">
                       <Image
                         src={experience.logo}
                         alt={experience.organization}
