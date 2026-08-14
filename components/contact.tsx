@@ -28,7 +28,7 @@ export function Contact() {
         
         <div className="text-center space-y-8">
           <p className="text-muted-foreground max-w-xl mx-auto">
-            I&apos;m currently seeking staff positions across different servers, both managerial and moderation positions.
+            I&apos;m currently seeking for managerial positions.
             If you&apos;re interested in hiring me, send me a message on Discord!
           </p>
           
