@@ -16,7 +16,7 @@ function DiscordIcon({ className }: { className?: string }) {
 
 export function Contact() {
   return (
-    <section id="contact" className="border-t border-border bg-muted/40 px-6 py-24">
+    <section id="contact" className="scroll-mt-16 border-t border-border bg-muted/60 px-6 py-24">
       <div className="mx-auto max-w-3xl">
         <h2 className="mb-4 text-center text-sm font-medium uppercase tracking-widest text-primary">
           Contact

@@ -14,8 +14,8 @@ const experiences = [
   {
     title: "Head of Staff",
     organization: "Escape Tsunami For Brainrots",
-    organizationUrl: "https://discord.gg/escapetsunami",
-    inviteCode: "escapetsunami",
+    organizationUrl: "https://discord.gg/6ycGqCgra7",
+    inviteCode: "6ycGqCgra7",
     date: "February 2026 - Present",
     description:
       "Leading and managing the staff team, maintaining and updating documentation, overseeing moderation standards, and ensuring the community runs smoothly through effective coordination and support.",
@@ -55,7 +55,7 @@ const experiences = [
 
 export function Projects() {
   return (
-    <section id="projects" className="border-t border-border bg-muted/40 px-6 py-24">
+    <section id="projects" className="scroll-mt-16 border-t border-border bg-muted/60 px-6 py-24">
       <div className="mx-auto max-w-5xl">
         <h2 className="mb-4 text-center text-sm font-medium uppercase tracking-widest text-primary">
           Projects
