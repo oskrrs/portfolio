@@ -4,7 +4,7 @@ const skillCategories = [
   {
     title: "Moderation Bots",
     icon: Bot,
-    description: "Bots I use to keep communities safe and organised.",
+    description: "Bots I have experience using to keep communities safe and organised.",
     skills: ["Dyno", "Circle", "Sapphire", "Zeppelin", "Gaius"],
   },
   {
@@ -16,7 +16,7 @@ const skillCategories = [
   {
     title: "Tools & Platforms",
     icon: Wrench,
-    description: "Software I rely on to stay productive day to day.",
+    description: "Tools I rely on to ensure productivity and organisation.",
     skills: ["Google Docs", "Google Sheets", "Discord", "Trello", "Notion"],
   },
 ]
@@ -29,7 +29,7 @@ export function Skills() {
           Skills
         </h2>
         <p className="mx-auto mb-4 max-w-2xl text-center text-3xl font-semibold tracking-tight text-foreground sm:text-4xl text-balance">
-          Tools and traits I bring to the table
+          Tools and traits
         </p>
         <div className="mx-auto mb-16 h-1 w-16 rounded-full bg-primary" />
 
