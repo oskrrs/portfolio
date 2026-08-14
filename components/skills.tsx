@@ -17,7 +17,7 @@ const skillCategories = [
     title: "Tools & Platforms",
     icon: Wrench,
     description: "Tools I rely on to ensure productivity and organisation.",
-    skills: ["Google Docs", "Google Sheets", "Discord", "Trello", "Notion"],
+    skills: ["Discord", "Google Docs", "Google Sheets", "Trello", "Notion"],
   },
 ]
 
