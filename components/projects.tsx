@@ -55,14 +55,15 @@ const experiences = [
 
 export function Projects() {
   return (
-    <section id="projects" className="px-6 py-24">
+    <section id="projects" className="border-t border-border bg-muted/40 px-6 py-24">
       <div className="mx-auto max-w-5xl">
         <h2 className="mb-4 text-center text-sm font-medium uppercase tracking-widest text-primary">
           Projects
         </h2>
-        <p className="mx-auto mb-16 max-w-2xl text-center text-3xl font-semibold tracking-tight text-foreground sm:text-4xl text-balance">
+        <p className="mx-auto mb-4 max-w-2xl text-center text-3xl font-semibold tracking-tight text-foreground sm:text-4xl text-balance">
           Work Experience
         </p>
+        <div className="mx-auto mb-16 h-1 w-16 rounded-full bg-primary" />
 
         <div className="flex flex-col gap-6">
           {experiences.map((experience, index) => (
