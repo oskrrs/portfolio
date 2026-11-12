@@ -1,14 +1,5 @@
-import { Card, CardContent } from "@/components/ui/card"
 import Image from "next/image"
 import { DiscordMemberBadge } from "@/components/discord-member-badge"
-
-function PlaceholderLogo({ className }: { className?: string }) {
-  return (
-    <div className={`${className} bg-muted rounded-lg flex items-center justify-center`}>
-      <span className="text-muted-foreground text-xl font-bold">?</span>
-    </div>
-  )
-}
 
 const experiences = [
   {
@@ -55,63 +46,59 @@ const experiences = [
 
 export function Projects() {
   return (
-    <section id="projects" className="scroll-mt-16 border-t border-border bg-muted/60 px-6 py-24">
+    <section id="projects" className="scroll-mt-20 border-t border-border bg-muted/45 px-6 py-20 sm:py-24">
       <div className="mx-auto max-w-5xl">
-        <h2 className="mb-4 text-center text-sm font-medium uppercase tracking-widest text-primary">
-          Projects
-        </h2>
-        <p className="mx-auto mb-4 max-w-2xl text-center text-3xl font-semibold tracking-tight text-foreground sm:text-4xl text-balance">
-          Work Experience
-        </p>
-        <div className="mx-auto mb-16 h-1 w-16 rounded-full bg-primary" />
+        <div className="mb-10 flex flex-col gap-3 sm:mb-12 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="mb-2 text-xs font-medium uppercase tracking-[0.16em] text-primary">02 / Experience</p>
+            <h2 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+              Community roles
+            </h2>
+          </div>
+          <p className="max-w-sm text-sm leading-6 text-muted-foreground">
+            Moderation and staff leadership across a range of active communities.
+          </p>
+        </div>
 
-        <div className="flex flex-col gap-6">
+        <div className="border-t border-border">
           {experiences.map((experience, index) => (
-            <Card
-              key={`${experience.organization}-${index}`}
-              className="group border border-border bg-card shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5"
+            <article
+              key={experience.organization}
+              className="grid gap-4 border-b border-border py-6 sm:grid-cols-[3.5rem_1fr_auto] sm:gap-6 sm:py-7"
             >
-              <CardContent className="p-6">
-                <div className="flex gap-4">
-                  {experience.logo ? (
-                    <div className="h-14 w-14 shrink-0 rounded-lg overflow-hidden bg-muted relative ring-1 ring-border transition-transform duration-300 group-hover:scale-105">
-                      <Image
-                        src={experience.logo}
-                        alt={experience.organization}
-                        width={112}
-                        height={112}
-                        className="h-full w-full object-cover"
-                        unoptimized
-                      />
-                    </div>
-                  ) : (
-                    <PlaceholderLogo className="h-14 w-14 shrink-0" />
-                  )}
-                  <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-foreground">
-                      {experience.title}
-                    </h3>
-                    <a
-                      href={experience.organizationUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-primary hover:underline text-sm"
-                    >
-                      {experience.organization}
-                    </a>
-                    <p className="text-sm text-muted-foreground mt-0.5">
-                      {experience.date}
-                    </p>
-                    <p className="mt-4 text-muted-foreground">
-                      {experience.description}
-                    </p>
-                    <div className="mt-4 flex flex-wrap gap-2">
-                      <DiscordMemberBadge inviteCode={experience.inviteCode} />
-                    </div>
-                  </div>
+              <div className="relative h-12 w-12 overflow-hidden rounded-md border border-border bg-background">
+                <Image
+                  src={experience.logo}
+                  alt={`${experience.organization} logo`}
+                  fill
+                  sizes="48px"
+                  className="object-cover"
+                  unoptimized
+                />
+              </div>
+
+              <div className="min-w-0">
+                <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                  <h3 className="font-semibold text-foreground">{experience.title}</h3>
+                  <a
+                    href={experience.organizationUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-medium text-primary underline-offset-4 hover:underline"
+                  >
+                    {experience.organization}
+                  </a>
                 </div>
-              </CardContent>
-            </Card>
+                <p className="mt-2 max-w-3xl text-sm leading-6 text-muted-foreground">
+                  {experience.description}
+                </p>
+                <div className="mt-3">
+                  <DiscordMemberBadge inviteCode={experience.inviteCode} />
+                </div>
+              </div>
+
+              <p className="text-xs text-muted-foreground sm:pt-1 sm:text-right">{experience.date}</p>
+            </article>
           ))}
         </div>
       </div>
