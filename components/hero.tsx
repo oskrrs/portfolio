@@ -11,7 +11,7 @@ export function Hero() {
         <div>
           <p className="mb-6 flex items-center gap-3 text-xs font-medium uppercase tracking-[0.2em] text-background/65">
             <span className="h-px w-8 bg-primary" />
-            Oskar · Community moderation
+            Oskar · Server Moderator &amp; Manager
           </p>
           <h1 className="max-w-3xl text-[clamp(3.5rem,9vw,7.75rem)] font-semibold leading-[0.88] tracking-[-0.07em]">
             Good communities are built.

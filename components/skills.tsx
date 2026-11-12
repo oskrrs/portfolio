@@ -3,19 +3,19 @@ const approach = [
     number: "01",
     title: "Lead the team",
     description:
-      "Set clear expectations, keep staff aligned, and make sure moderators have the context to act with confidence.",
+      "Set clear expectations, keep staff aligned and ensure moderators are well-informed and are confident to conduct their duties.",
   },
   {
     number: "02",
     title: "Make moderation consistent",
     description:
-      "Build practical documentation and dependable systems so the rules feel fair and the response is clear.",
+      "Create documents and dependable systems to ensure moderators are informed and moderation is consistent throughout the team.",
   },
   {
     number: "03",
     title: "Look after the community",
     description:
-      "Handle reports thoughtfully, support members, and protect the kind of culture people want to return to.",
+      "Handling reports, tickets and any moderation concerns to ensure the community is being looked after and protected at all times.",
   },
 ]
 
@@ -30,9 +30,6 @@ export function Skills() {
               Good moderation is more than removing messages.
             </h2>
           </div>
-          <p className="max-w-md text-sm leading-7 text-muted-foreground md:justify-self-end">
-            It takes calm judgment, clear systems, and people who care about the space they help shape.
-          </p>
         </div>
 
         <div className="grid border-y border-border md:grid-cols-3">

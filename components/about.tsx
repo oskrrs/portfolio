@@ -9,9 +9,6 @@ export function About() {
               Passionate about safer communities.
             </h2>
           </div>
-          <p className="max-w-md text-sm leading-6 text-muted-foreground">
-            My work combines practical moderation, clear communication, and thoughtful community support.
-          </p>
         </div>
 
         <div className="grid gap-8 border-t border-border pt-7 md:grid-cols-2 md:gap-12">

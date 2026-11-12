@@ -7,7 +7,6 @@ export function Footer() {
         <a href="#top" className="font-semibold tracking-tight text-background transition-colors hover:text-primary">
           oskrrs
         </a>
-        <p>Community moderation · GMT / UTC+0</p>
         <a
           href="https://discord.com/users/836282556168929360"
           target="_blank"
