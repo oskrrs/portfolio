@@ -5,7 +5,7 @@ import { useCallback, useEffect, useState } from "react"
 const links = [
   { id: "about", label: "About" },
   { id: "projects", label: "Experience" },
-  { id: "skills", label: "Skills" },
+  { id: "skills", label: "Approach" },
   { id: "contact", label: "Contact" },
 ]
 
