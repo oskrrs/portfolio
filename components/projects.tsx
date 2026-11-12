@@ -56,9 +56,10 @@ export function Projects() {
               Work in good company.
             </h2>
           </div>
-          <p className="max-w-xs text-sm leading-6 text-muted-foreground">
-            A record of showing up, taking responsibility, and helping communities grow.
-          </p>
+          <div className="flex items-end gap-3 border-l border-primary pl-4 sm:mb-1" aria-label="Experience leading a community with more than 20,000 members">
+            <p className="text-3xl font-semibold tracking-[-0.05em] text-primary">20,000+</p>
+            <p className="max-w-[10rem] pb-1 text-xs leading-5 text-muted-foreground">members in a community I helped lead</p>
+          </div>
         </div>
 
         <div className="border-t-2 border-foreground">
