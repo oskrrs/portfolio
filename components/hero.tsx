@@ -29,7 +29,7 @@ export function Hero() {
         </div>
 
         <div className="mx-auto w-full max-w-sm md:max-w-none">
-          <div className="relative aspect-[4/5] overflow-hidden bg-background/10">
+          <div className="relative aspect-[4/5] overflow-hidden border border-background/10 bg-background/10">
             <Image
               src="/images/profile.jpg"
               alt="Black cat sitting in front of a bright window"
@@ -38,15 +38,7 @@ export function Hero() {
               priority
               sizes="(max-width: 768px) 80vw, 34vw"
             />
-            <div className="absolute inset-x-0 bottom-0 flex items-end justify-between bg-gradient-to-t from-black/65 to-transparent px-5 pb-5 pt-16 text-sm text-white">
-              <span>Online, but human.</span>
-              <span className="font-mono text-xs text-white/70">GMT / UTC+0</span>
-            </div>
           </div>
-          <p className="mt-3 flex items-center justify-between text-[10px] uppercase tracking-[0.16em] text-background/45">
-            <span>Independent moderator</span>
-            <span>01 — 04</span>
-          </p>
         </div>
       </div>
 
